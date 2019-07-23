@@ -8,6 +8,7 @@ window.Model = function (options) {
         },
         fetch: function(){
             var query = new AV.Query(resourceName);
+
             return query.find()
         },
         save: function(object){

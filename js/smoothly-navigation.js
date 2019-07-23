@@ -19,7 +19,7 @@
       let top = element.offsetTop // 通过element得到距离页面顶部的距离 // 以上四句话等于let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop
 
       let currentTop = window.scrollY // 求出当前Top
-      let targetTop = top - 80 // 求出目标Top
+      let targetTop = top - 120 // 求出目标Top
       let s = targetTop - currentTop // 求出总的路程s
       var coords = { y: currentTop }; // 起始位置：当前坐标：y，
       var t = Math.abs((s / 100) * 300) // 总的时间是s/100)*300的绝对值

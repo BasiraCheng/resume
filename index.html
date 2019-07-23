@@ -4,8 +4,15 @@
 <head>
   <title>个人简历</title>
   <script src="//at.alicdn.com/t/font_1116855_xr7uagwvajk.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
   <link rel="stylesheet" href="./main.css">
+  <style type="text/css">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+</style>
 </head>
 
 <body>
@@ -18,34 +25,18 @@
       <nav class="menu" style="float: right;">
         <ul class="clearfix">
           <li>
-            <a href="#siteAbout">关于</a>
+            <a href="#siteAbout">个人</a>
           </li>
           <li><a href="#siteSkills">技能</a>
           </li>
           <li>
             <a href="#siteWorks">作品</a>
-            <ul class="submenu">
-              <li>作品1</li>
-              <li>作品2</li>
-              <li>作品3</li>
-            </ul>
           </li>
           <li>
-            <a href="#">博客</a>
-            <ul class="submenu">
-              <li>博客1</li>
-              <li>博客2</li>
-              <li>博客3</li>
-            </ul>
+            <a href="#message">留言</a>
           </li>
           <li>
-            <a href="#">日历</a>
-          </li>
-          <li>
-            <a href="#">联系方式</a>
-          </li>
-          <li>
-            <a href="#">其他</a>
+            <a href="#contact">联系</a>
           </li>
         </ul>
       </nav>
@@ -55,23 +46,21 @@
     <div class="mask"></div>
   </div>
   <main>
-
-
     <div data-x id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
-          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
+          <img src="./img/works/me.jpg" width=299 height=347 alt="头像">
         </div>
         <div class="text">
           <span class="welcome">Hello
             <span class="triangle"></span>
           </span>
           <h1>成不贤</h1>
-          <p>自由职业</p>
+          <p>前端工程师</p>
           <hr>
           <dl>
             <dt>年龄</dt>
-            <dd>18</dd>
+            <dd>27</dd>
             <dt>所在城市</dt>
             <dd>广州</dd>
             <dt>邮箱</dt>
@@ -101,10 +90,6 @@
     </div>
     <p class="downloadResume-wrapper">
       <a class="downloadResume" href="./resume.pdf" target="blank" download>下载 PDF 简历</a>
-    </p>
-    <p class="selfIntroduction">
-      成不贤， 自由职业，现在在 饥人谷 学习前端课程。<br>
-      技能：前端开发，Rails 开发，Node.js 开发
     </p>
 
   </main>
@@ -163,28 +148,48 @@
   </section>
   <section data-x class="portfolio" id="siteWorks">
     <h2>作品集</h2>
-    <!--这就是view,用户看得到的东西-->
-    <!-- Slider main container -->
-    <div id="mySlides">
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <img src="./img/works/nav-page.jpg" class="swiper-slide">
-          <img src="./img/works/canvas.jpg" class="swiper-slide">
-          <img src="./img/works/apple-style-slide-show.jpg" class="swiper-slide">
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-      <!--If we need navigation buttons-->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div class="works">
+      <ol>
+        <li>
+          <img src="./img/works/nav-page.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述</p>
+        </li>
+        <li>
+          <img src="./img/works/canvas.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述</p>
+        </li>
+        <li>
+          <img src="./img/works/apple-style-slide-show.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述</p>
+        </li>
+        <li>
+          <img src="./img/works/nav-page.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述</p>
+        </li>
+        <li>
+          <img src="./img/works/canvas.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述:该项目使用原生JS实现，主要调用 Canvas API，实现了划线、调色、橡皮擦、保存等功能。完全由我独立开发。</p>
+        </li>
+        <li>
+          <img src="./img/works/apple-style-slide-show.jpg">
+          <p>关键字</p>
+          <div><a href="源码链接"></a><a href="预览链接"></a></div>
+          <p>描述</p>
+        </li>
+      </ol>
     </div>
-
-
   </section>
-  <section class="message">
+  <section data-x id="message"class="message">
     <h2>留言</h2>
     <ol id="messageList"></ol>
     <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
@@ -195,14 +200,31 @@
       <input type="submit" value="提交">
     </form>
   </section>
+  <section data-x id="contact" class="contact">
+    <h2>联系</h2>
+    <a href="#">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-qq"></use>
+      </svg>
+    </a>
+    <a href="#">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-wechat"></use>
+      </svg>
+    </a>
+    <a href="#">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-phone"></use>
+      </svg>
+    </a>
+
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
   <script src="./js/base/View.js"></script>
   <script src="./js/base/Model.js"></script>
   <script src="./js/base/Controller.js"></script>
   <!-- 模块化 -->
-  <script src="./js/init-swiper.js"></script>
   <script src="./js/auto-slide-up.js"></script>
   <script src="./js/sticky-topbar.js"></script>
   <script src="./js/smoothly-navigation.js"></script>
